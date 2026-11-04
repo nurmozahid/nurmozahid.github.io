@@ -6,9 +6,9 @@ subtitle: Agricultural Economics · Environmental Economics · Applied Econometr
 
 profile:
   align: right
-  image:
+  image: nur-mozahid.jpg
   image_circular: false 
-  more_info:
+more_info: ""
 
 selected_papers: false
 social: 
