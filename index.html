@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- =====================================================
+  SECTION 1: WEBSITE TITLE AND SEARCH DESCRIPTION
+  Edit the title and description below.
+  ====================================================== -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Nur Mozahid | Agricultural Economist</title>
+
+  <meta
+    name="description"
+    content="Academic website of Nur Mozahid. Research, publications, teaching, and courses in agricultural economics, environmental economics, and applied econometrics."
+  >
+
+  <!-- =====================================================
+  SECTION 2: WEBSITE DESIGN
+  Controls colours, fonts, spacing, and mobile layout.
+  You can leave this entire section unchanged.
+  ====================================================== -->
+
+  <style>
+    /* MAIN COLOURS */
+    :root {
+      --background: #fafbf8;
+      --surface: #ffffff;
+      --text: #19352d;
+      --secondary-text: #586a63;
+      --accent: #246b50;
+      --border: #dce5dd;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    a {
+      color: var(--accent);
+      overflow-wrap: anywhere;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    a:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 5px;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: 0 auto;
+    }
+
+    /* TOP MENU */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 22px 0;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .brand {
+      color: var(--text);
+      font-size: 23px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    nav a {
+      color: var(--text);
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    /* ABOUT AREA */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 40px;
+      align-items: center;
+      padding: 70px 0;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 14px 0 20px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(40px, 7vw, 64px);
+      font-weight: normal;
+      line-height: 1.15;
+    }
+
+    .lead {
+      max-width: 780px;
+      font-size: 21px;
+      line-height: 1.6;
+    }
+
+    .muted {
+      color: var(--secondary-text);
+    }
+
+    .portrait {
+      width: 100%;
+      max-width: 260px;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: 16px;
+      justify-self: center;
+    }
+
+    /* Show photo beside biography when a photo is added */
+    .hero.with-photo {
+      grid-template-columns: minmax(0, 1fr) 260px;
+    }
+
+    /* GENERAL SECTIONS */
+    section {
+      padding: 42px 0;
+      border-top: 1px solid var(--border);
+      scroll-margin-top: 20px;
+    }
+
+    h2 {
+      margin: 0 0 22px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 33px;
+      font-weight: normal;
+      line-height: 1.3;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    p {
+      margin: 0 0 17px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      padding: 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .card p {
+      color: var(--secondary-text);
+      font-size: 15px;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 18px;
+      border: 1px solid var(--accent);
+      border-radius: 5px;
+      background: var(--accent);
+      color: #ffffff;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      opacity: 0.9;
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--accent);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    /* PUBLICATIONS */
+    .publication {
+      margin-bottom: 28px;
+      padding-left: 22px;
+      border-left: 3px solid var(--accent);
+    }
+
+    .publication p {
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    /* COURSES */
+    .course {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .course:first-of-type {
+      padding-top: 8px;
+    }
+
+    .course:last-of-type {
+      border-bottom: none;
+    }
+
+    .course summary {
+      padding: 6px 0;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .course-details {
+      padding-top: 15px;
+    }
+
+    .course-details p {
+      font-size: 15px;
+    }
+
+    .course-label {
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    /* CONTACT */
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      padding: 0;
+      list-style: none;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 20px;
+      padding: 25px 0;
+      border-top: 1px solid var(--border);
+      color: var(--secondary-text);
+      font-size: 13px;
+    }
+
+    /* MOBILE DISPLAY */
+    @media (max-width: 760px) {
+      .hero,
+      .hero.with-photo {
+        grid-template-columns: 1fr;
+        padding: 42px 0;
+        gap: 28px;
+      }
+
+      .portrait {
+        max-width: 210px;
+        justify-self: start;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .lead {
+        font-size: 19px;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      section {
+        padding: 32px 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =====================================================
+  SECTION 3: TOP MENU
+  The words between the tags are the visible menu labels.
+  Keep the href values unless you also rename section IDs.
+  ====================================================== -->
+
+  <header>
+    <div class="container header-content">
+
+      <a class="brand" href="#about">Nur Mozahid</a>
+
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#courses">Courses</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- =====================================================
+    SECTION 4: ABOUT
+    Edit your name, introduction, and biography here.
+    ====================================================== -->
+
+    <div class="hero" id="about">
+
+      <div>
+        <p class="eyebrow">
+          Agricultural & Environmental Economics
+        </p>
+
+        <h1>Nur Mozahid</h1>
+
+        <p class="lead">
+          I study how agriculture can improve economic
+          performance while reducing its environmental impact.
+        </p>
+
+        <p>
+          I am a PhD candidate in the Agricultural Economics
+          and Rural Policy Group at Wageningen University
+          &amp; Research, the Netherlands, and an Assistant
+          Professor at Sylhet Agricultural University,
+          Bangladesh.
+        </p>
+
+        <p class="muted">
+          My research combines production economics,
+          applied econometrics, and machine learning.
+          I focus on farm productivity, environmental
+          efficiency, and pollution abatement costs,
+          particularly in dairy farming.
+        </p>
+
+        <div class="actions">
+          <a class="button" href="#research">
+            Explore my research
+          </a>
+
+          <a class="button secondary" href="#courses">
+            View courses
+          </a>
+        </div>
+      </div>
+
+      <!-- PHOTO: ENABLE AFTER UPLOADING YOUR PHOTOGRAPH
+
+      1. Upload a JPG photograph named profile.jpg into the
+         main repository folder, beside index.html.
+      2. Above, change class="hero" to class="hero with-photo".
+      3. Remove the comment markers surrounding the img line
+         below. Keep the img line itself.
+
+      -->
+
+      <!--
+      <img
+        class="portrait"
+        src="profile.jpg"
+        alt="Portrait of Nur Mozahid"
+        width="260"
+        height="325"
+      >
+      -->
+
+    </div>
+
+    <!-- =====================================================
+    SECTION 5: RESEARCH
+    Edit each heading and description.
+    ====================================================== -->
+
+    <section id="research">
+
+      <h2>Research</h2>
+
+      <p class="muted">
+        My research examines farm performance and the
+        economic implications of environmental improvement.
+      </p>
+
+      <div class="grid">
+
+        <!-- RESEARCH TOPIC 1 -->
+        <article class="card">
+          <h3>Farm productivity and efficiency</h3>
+
+          <p>
+            Understanding differences in agricultural
+            performance and identifying opportunities
+            for economic and environmental improvement.
+          </p>
+        </article>
+
+        <!-- RESEARCH TOPIC 2 -->
+        <article class="card">
+          <h3>Environmental economics and policy</h3>
+
+          <p>
+            Examining nutrient surpluses, emissions,
+            and differences in the costs farms face
+            when reducing pollution.
+          </p>
+        </article>
+
+        <!-- RESEARCH TOPIC 3 -->
+        <article class="card">
+          <h3>Applied econometrics and machine learning</h3>
+
+          <p>
+            Using farm-level data and quantitative
+            methods to understand heterogeneity and
+            inform agricultural decisions.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- =====================================================
+    SECTION 6: PUBLICATIONS
+    Add a new article block for each additional paper.
+    ====================================================== -->
+
+    <section id="publications">
+
+      <h2>Publications</h2>
+
+      <!-- PUBLICATION 1 START -->
+      <article class="publication">
+
+        <h3>
+          Weather impact on environmental efficiency
+          of the Irish dairy sector: A panel stochastic
+          frontier analysis
+        </h3>
+
+        <p>
+          Mozahid, M. N., Gardebroek, C., Thorne, F.,
+          Buckley, C., &amp; Francisco-Cruz, C. A. (2025).
+        </p>
+
+        <p class="muted">
+          <em>European Review of Agricultural Economics</em>,
+          52(5), 1410–1441.
+        </p>
+
+        <!-- OPTIONAL PAPER LINK
+        Replace the example address with the paper's real URL,
+        then remove the surrounding comment markers.
+
+        <a href="https://example.com">
+          Read the paper
+        </a>
+        -->
+
+      </article>
+      <!-- PUBLICATION 1 END -->
+
+      <!-- ADD YOUR NEXT PUBLICATION ABOVE THIS LINE -->
+
+    </section>
+
+    <!-- =====================================================
+    SECTION 7: TEACHING
+    Edit the paragraphs and bullet points below.
+    ====================================================== -->
+
+    <section id="teaching">
+
+      <h2>Teaching</h2>
+
+      <p>
+        My teaching interests include econometrics,
+        statistics, research methods, and applied
+        data analysis using R and Stata.
+      </p>
+
+      <p>
+        I aim to make quantitative methods accessible
+        through practical examples and applications
+        to research questions.
+      </p>
+
+      <ul>
+        <li>Applied econometrics</li>
+        <li>Statistics and quantitative research methods</li>
+        <li>Data analysis using R and Stata</li>
+        <li>Machine learning for applied research</li>
+      </ul>
+
+    </section>
+
+    <!-- =====================================================
+    SECTION 8: COURSES
+    These are proposed courses, not open registrations.
+    Edit titles, descriptions, dates, fees, and status.
+    Visitors can click a title to expand its details.
+    ====================================================== -->
+
+    <section id="courses">
+
+      <h2>Courses</h2>
+
+      <p>
+        Planned training for students and researchers
+        interested in quantitative methods and
+        practical data analysis.
+      </p>
+
+      <p class="muted">
+        Course dates, fees, and registration details
+        will be announced when confirmed.
+      </p>
+
+      <!-- COURSE 1 START -->
+      <details class="course">
+        <summary>Applied Econometrics Using R</summary>
+
+        <div class="course-details">
+          <p>
+            Learn how to prepare data, estimate regression
+            models, interpret results, and present findings
+            using R.
+          </p>
+
+          <p>
+            <span class="course-label">Topics:</span>
+            Data preparation, descriptive statistics,
+            regression, hypothesis testing, and diagnostics.
+          </p>
+
+          <p>
+            <span class="course-label">Status:</span>
+            Planned — registration not yet open.
+          </p>
+        </div>
+      </details>
+      <!-- COURSE 1 END -->
+
+      <!-- COURSE 2 START -->
+      <details class="course">
+        <summary>
+          Machine Learning for Applied Research Using R
+        </summary>
+
+        <div class="course-details">
+          <p>
+            An introduction to prediction and classification
+            methods, with an emphasis on practical
+            implementation and interpretation.
+          </p>
+
+          <p>
+            <span class="course-label">Topics:</span>
+            Training and testing data, cross-validation,
+            decision trees, random forests, and model evaluation.
+          </p>
+
+          <p>
+            <span class="course-label">Status:</span>
+            Planned — registration not yet open.
+          </p>
+        </div>
+      </details>
+      <!-- COURSE 2 END -->
+
+      <!-- COURSE 3 START -->
+      <details class="course">
+        <summary>
+          Quantitative Research Methods and Statistics
+        </summary>
+
+        <div class="course-details">
+          <p>
+            Build a foundation in research design,
+            statistical reasoning, and the interpretation
+            of quantitative evidence.
+          </p>
+
+          <p>
+            <span class="course-label">Topics:</span>
+            Variables, sampling, descriptive statistics,
+            confidence intervals, hypothesis testing,
+            and introductory regression.
+          </p>
+
+          <p>
+            <span class="course-label">Status:</span>
+            Planned — registration not yet open.
+          </p>
+        </div>
+      </details>
+      <!-- COURSE 3 END -->
+
+      <!-- COURSE 4 START -->
+      <details class="course">
+        <summary>
+          Time Series and Panel Data Econometrics
+        </summary>
+
+        <div class="course-details">
+          <p>
+            Explore methods for analysing observations
+            across time and repeated observations
+            of individuals, households, or firms.
+          </p>
+
+          <p>
+            <span class="course-label">Topics:</span>
+            Time series properties, stationarity,
+            fixed effects, random effects, and
+            model interpretation.
+          </p>
+
+          <p>
+            <span class="course-label">Status:</span>
+            Planned — registration not yet open.
+          </p>
+        </div>
+      </details>
+      <!-- COURSE 4 END -->
+
+      <!-- COURSE 5 START -->
+      <details class="course">
+        <summary>Scientific Writing for Research Publications</summary>
+
+        <div class="course-details">
+          <p>
+            Develop clear research arguments and
+            communicate methods, results, and implications
+            effectively.
+          </p>
+
+          <p>
+            <span class="course-label">Topics:</span>
+            Article structure, introductions, literature
+            positioning, results, discussion, and revision.
+          </p>
+
+          <p>
+            <span class="course-label">Status:</span>
+            Planned — registration not yet open.
+          </p>
+        </div>
+      </details>
+      <!-- COURSE 5 END -->
+
+      <!-- REGISTRATION LINK EXAMPLE
+      When registration opens, add a real registration URL.
+      Remove the comment markers to display the button.
+
+      <a class="button" href="https://example.com">
+        Register for a course
+      </a>
+      -->
+
+    </section>
+
+    <!-- =====================================================
+    SECTION 9: CV
+    Upload your CV as cv.pdf beside index.html.
+    Then enable the download link below.
+    ====================================================== -->
+
+    <section id="cv">
+
+      <h2>Curriculum vitae</h2>
+
+      <p>
+        My CV will be available here shortly.
+      </p>
+
+      <!-- CV DOWNLOAD LINK
+      After uploading cv.pdf, remove the comment markers
+      around the link below. You can also remove the
+      "My CV will be available" paragraph above.
+
+      <a class="button" href="cv.pdf" download>
+        Download my CV
+      </a>
+      -->
+
+    </section>
+
+    <!-- =====================================================
+    SECTION 10: CONTACT
+    Add your real public contact details before enabling links.
+    ====================================================== -->
+
+    <section id="contact">
+
+      <h2>Contact</h2>
+
+      <p>
+        I welcome enquiries about research collaboration,
+        teaching, and training.
+      </p>
+
+      <p class="muted">
+        Contact details and academic profile links
+        will be added shortly.
+      </p>
+
+      <!-- CONTACT LINKS
+      Replace the example details with your real information.
+      Then remove the surrounding comment markers.
+
+      <ul class="contact-links">
+        <li>
+          <a href="mailto:your-email@example.com">
+            Email
+          </a>
+        </li>
+
+        <li>
+          <a href="https://scholar.google.com/citations?user=YOUR_ID">
+            Google Scholar
+          </a>
+        </li>
+
+        <li>
+          <a href="https://orcid.org/YOUR_ORCID">
+            ORCID
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.linkedin.com/in/YOUR_PROFILE/">
+            LinkedIn
+          </a>
+        </li>
+      </ul>
+      -->
+
+    </section>
+
+  </main>
+
+  <!-- =====================================================
+  SECTION 11: FOOTER
+  Edit the text shown at the bottom of your website.
+  ====================================================== -->
+
+  <footer>
+    <div class="container">
+      © Nur Mozahid · Agricultural &amp; Environmental Economics
+    </div>
+  </footer>
+
+</body>
+</html>
