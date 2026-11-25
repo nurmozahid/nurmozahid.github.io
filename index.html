@@ -333,6 +333,204 @@
         scroll-behavior: auto;
       }
     }
+/* =====================================================
+COURSES PAGE DESIGN
+Edit colours, spacing, and card layout here.
+===================================================== */
+
+.training-header {
+  max-width: 850px;
+  margin-bottom: 38px;
+}
+
+.training-header h2 {
+  font-size: clamp(32px, 5vw, 44px);
+}
+
+.training-intro {
+  color: var(--secondary-text);
+  font-size: 18px;
+}
+
+.course-section-title {
+  margin: 38px 0 20px;
+  font-size: 25px;
+  font-family: Georgia, serif;
+  font-weight: normal;
+}
+
+.featured-course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.additional-course-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.training-card {
+  display: flex;
+  flex-direction: column;
+  padding: 26px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  min-width: 0;
+}
+
+.course-status {
+  align-self: flex-start;
+  margin-bottom: 18px;
+  padding: 5px 10px;
+  background: #eaf2ec;
+  color: #24543d;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.training-card h4 {
+  margin: 0 0 8px;
+  font-size: 21px;
+  line-height: 1.4;
+}
+
+.course-subtitle {
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.course-description {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.course-audience {
+  color: var(--secondary-text);
+  font-size: 14px;
+}
+
+.course-audience strong,
+.course-format strong {
+  display: block;
+  color: var(--text);
+  margin-bottom: 3px;
+}
+
+.course-syllabus {
+  margin: 4px 0 18px;
+}
+
+.course-syllabus summary {
+  display: list-item;
+  width: fit-content;
+  padding: 7px 12px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--accent);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.course-syllabus ul {
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+.course-syllabus li {
+  margin-bottom: 5px;
+}
+
+.course-format {
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid var(--border);
+  color: var(--secondary-text);
+  font-size: 13px;
+}
+
+.course-interest-button {
+  margin-top: 8px;
+  align-self: flex-start;
+}
+
+.institutional-panel {
+  margin-top: 40px;
+  padding: 34px;
+  background: #eaf2ec;
+  border-radius: 14px;
+  color: var(--text);
+}
+
+.institutional-panel h3 {
+  margin-bottom: 15px;
+  font-family: Georgia, serif;
+  font-size: 28px;
+  font-weight: normal;
+}
+
+.institutional-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 30px;
+  padding-left: 22px;
+}
+
+.interest-panel {
+  margin-top: 40px;
+  padding: 30px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+.interest-panel h3 {
+  font-family: Georgia, serif;
+  font-size: 28px;
+  font-weight: normal;
+}
+
+.interest-note {
+  margin-top: 18px;
+  color: var(--secondary-text);
+  font-size: 13px;
+}
+
+.training-form-frame {
+  display: block;
+  width: 100%;
+  height: 1450px;
+  border: none;
+}
+
+@media (max-width: 900px) {
+  .featured-course-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .featured-course-grid,
+  .additional-course-grid,
+  .institutional-options {
+    grid-template-columns: 1fr;
+  }
+
+  .training-card {
+    padding: 22px;
+  }
+
+  .institutional-panel,
+  .interest-panel {
+    padding: 24px;
+  }
+}
   </style>
 </head>
 
@@ -733,164 +931,553 @@ To add another paper, copy one complete article block.
     Visitors can click a title to expand its details.
     ====================================================== -->
 
-    <section id="courses">
+   <!-- =====================================================
+SECTION 8: COURSES AND PROFESSIONAL TRAINING
 
-      <h2>Courses</h2>
+EDITING GUIDE
+A: Page introduction
+B: Three featured courses
+C: Four additional courses
+D: Institutional training
+E: Interest form
 
-      <p>
-        Planned training for students and researchers
-        interested in quantitative methods and
-        practical data analysis.
-      </p>
+Search for COURSE 1, COURSE 2, etc. to edit a course.
+===================================================== -->
 
-      <p class="muted">
-        Course dates, fees, and registration details
-        will be announced when confirmed.
-      </p>
+<section id="courses">
 
-      <!-- COURSE 1 START -->
-      <details class="course">
-        <summary>Applied Econometrics Using R</summary>
+  <!-- =================================================
+  PART A: PAGE INTRODUCTION
+  Edit the heading and introductory paragraph here.
+  ================================================== -->
 
-        <div class="course-details">
-          <p>
-            Learn how to prepare data, estimate regression
-            models, interpret results, and present findings
-            using R.
-          </p>
+  <div class="training-header">
 
-          <p>
-            <span class="course-label">Topics:</span>
-            Data preparation, descriptive statistics,
-            regression, hypothesis testing, and diagnostics.
-          </p>
+    <h2>Courses and Professional Training</h2>
 
-          <p>
-            <span class="course-label">Status:</span>
-            Planned — registration not yet open.
-          </p>
-        </div>
-      </details>
-      <!-- COURSE 1 END -->
+    <p class="training-intro">
+      I develop practical courses in econometrics,
+      data analysis, applied statistics, research methods,
+      and scientific communication. The courses below
+      are planned for university students, researchers,
+      and institutional training programmes.
+    </p>
 
-      <!-- COURSE 2 START -->
-      <details class="course">
-        <summary>
-          Machine Learning for Applied Research Using R
-        </summary>
-
-        <div class="course-details">
-          <p>
-            An introduction to prediction and classification
-            methods, with an emphasis on practical
-            implementation and interpretation.
-          </p>
-
-          <p>
-            <span class="course-label">Topics:</span>
-            Training and testing data, cross-validation,
-            decision trees, random forests, and model evaluation.
-          </p>
-
-          <p>
-            <span class="course-label">Status:</span>
-            Planned — registration not yet open.
-          </p>
-        </div>
-      </details>
-      <!-- COURSE 2 END -->
-
-      <!-- COURSE 3 START -->
-      <details class="course">
-        <summary>
-          Quantitative Research Methods and Statistics
-        </summary>
-
-        <div class="course-details">
-          <p>
-            Build a foundation in research design,
-            statistical reasoning, and the interpretation
-            of quantitative evidence.
-          </p>
-
-          <p>
-            <span class="course-label">Topics:</span>
-            Variables, sampling, descriptive statistics,
-            confidence intervals, hypothesis testing,
-            and introductory regression.
-          </p>
-
-          <p>
-            <span class="course-label">Status:</span>
-            Planned — registration not yet open.
-          </p>
-        </div>
-      </details>
-      <!-- COURSE 3 END -->
-
-      <!-- COURSE 4 START -->
-      <details class="course">
-        <summary>
-          Time Series and Panel Data Econometrics
-        </summary>
-
-        <div class="course-details">
-          <p>
-            Explore methods for analysing observations
-            across time and repeated observations
-            of individuals, households, or firms.
-          </p>
-
-          <p>
-            <span class="course-label">Topics:</span>
-            Time series properties, stationarity,
-            fixed effects, random effects, and
-            model interpretation.
-          </p>
-
-          <p>
-            <span class="course-label">Status:</span>
-            Planned — registration not yet open.
-          </p>
-        </div>
-      </details>
-      <!-- COURSE 4 END -->
-
-      <!-- COURSE 5 START -->
-      <details class="course">
-        <summary>Scientific Writing for Research Publications</summary>
-
-        <div class="course-details">
-          <p>
-            Develop clear research arguments and
-            communicate methods, results, and implications
-            effectively.
-          </p>
-
-          <p>
-            <span class="course-label">Topics:</span>
-            Article structure, introductions, literature
-            positioning, results, discussion, and revision.
-          </p>
-
-          <p>
-            <span class="course-label">Status:</span>
-            Planned — registration not yet open.
-          </p>
-        </div>
-      </details>
-      <!-- COURSE 5 END -->
-
-      <!-- REGISTRATION LINK EXAMPLE
-      When registration opens, add a real registration URL.
-      Remove the comment markers to display the button.
-
-      <a class="button" href="https://example.com">
-        Register for a course
+    <div class="actions">
+      <a class="button" href="#featured-courses">
+        Explore Courses
       </a>
-      -->
 
-    </section>
+      <a class="button secondary" href="#institutional-training">
+        Request Institutional Training
+      </a>
+    </div>
+
+  </div>
+
+
+  <!-- =================================================
+  PART B: FEATURED COURSES
+  Three cards on desktop; one column on mobile.
+  ================================================== -->
+
+  <h3 class="course-section-title" id="featured-courses">
+    Featured Courses
+  </h3>
+
+  <div class="featured-course-grid">
+
+
+    <!-- =============================================
+    COURSE 1: APPLIED ECONOMETRICS USING R
+    ============================================== -->
+
+    <article class="training-card">
+
+      <span class="course-status">
+        Planned — express interest
+      </span>
+
+      <h4>Applied Econometrics Using R</h4>
+
+      <p class="course-subtitle">
+        From Raw Data to Research Results
+      </p>
+
+      <p class="course-description">
+        Learn how to prepare data, estimate econometric
+        models, and communicate results using R.
+        The course combines essential econometric
+        concepts with practical applications.
+      </p>
+
+      <p class="course-audience">
+        <strong>Target audience</strong>
+        Advanced undergraduate and master’s students,
+        researchers, and professionals in economics,
+        agricultural economics, business, and
+        development studies.
+      </p>
+
+      <details class="course-syllabus">
+        <summary>View Syllabus</summary>
+
+        <ul>
+          <li>Data preparation in R</li>
+          <li>Simple and multiple regression</li>
+          <li>Functional forms and interactions</li>
+          <li>Regression diagnostics</li>
+          <li>Robust standard errors</li>
+          <li>Reporting econometric results</li>
+        </ul>
+      </details>
+
+      <p class="course-format">
+        <strong>Proposed delivery format</strong>
+        Online or in person<br>
+        6 weeks · 12 sessions · 18 hours
+      </p>
+
+      <a class="button course-interest-button"
+         href="#course-interest">
+        Express Interest
+      </a>
+
+    </article>
+
+    <!-- END COURSE 1 -->
+
+
+    <!-- =============================================
+    COURSE 2: DATA ANALYSIS AND VISUALISATION USING R
+    ============================================== -->
+
+    <article class="training-card">
+
+      <span class="course-status">
+        Planned — express interest
+      </span>
+
+      <h4>Data Analysis and Visualisation Using R</h4>
+
+      <p class="course-subtitle">
+        Beginner to Research Ready
+      </p>
+
+      <p class="course-description">
+        Build practical R skills from the beginning.
+        Participants learn to import, clean, summarise,
+        and visualise data through guided exercises.
+      </p>
+
+      <p class="course-audience">
+        <strong>Target audience</strong>
+        Undergraduate and master’s students, researchers,
+        and professionals from any discipline.
+        No previous R experience is required.
+      </p>
+
+      <details class="course-syllabus">
+        <summary>View Syllabus</summary>
+
+        <ul>
+          <li>R and RStudio fundamentals</li>
+          <li>Importing and cleaning data</li>
+          <li>Data transformation</li>
+          <li>Descriptive analysis</li>
+          <li>Data visualisation</li>
+          <li>Reproducible workflows</li>
+        </ul>
+      </details>
+
+      <p class="course-format">
+        <strong>Proposed delivery format</strong>
+        Online or in person<br>
+        6 weeks · 12 sessions · 18 hours
+      </p>
+
+      <a class="button course-interest-button"
+         href="#course-interest">
+        Express Interest
+      </a>
+
+    </article>
+
+    <!-- END COURSE 2 -->
+
+
+    <!-- =============================================
+    COURSE 3: PANEL DATA ECONOMETRICS USING R
+    ============================================== -->
+
+    <article class="training-card">
+
+      <span class="course-status">
+        Planned — express interest
+      </span>
+
+      <h4>Panel Data Econometrics Using R</h4>
+
+      <p class="course-description">
+        Estimate and interpret econometric models using
+        repeated observations of individuals, farms,
+        firms, regions, or countries. The course
+        emphasises model selection, diagnostics,
+        and practical interpretation.
+      </p>
+
+      <p class="course-audience">
+        <strong>Target audience</strong>
+        Master’s students, researchers, and professionals
+        with basic regression and R knowledge.
+      </p>
+
+      <details class="course-syllabus">
+        <summary>View Syllabus</summary>
+
+        <ul>
+          <li>Panel-data preparation</li>
+          <li>Pooled OLS</li>
+          <li>Fixed-effects models</li>
+          <li>Random-effects models</li>
+          <li>Model-selection tests</li>
+          <li>Clustered standard errors</li>
+        </ul>
+      </details>
+
+      <p class="course-format">
+        <strong>Proposed delivery format</strong>
+        Online or in person<br>
+        6 weeks · 12 sessions · 18 hours
+      </p>
+
+      <a class="button course-interest-button"
+         href="#course-interest">
+        Express Interest
+      </a>
+
+    </article>
+
+    <!-- END COURSE 3 -->
+
+  </div>
+
+  <!-- END FEATURED COURSES GRID -->
+
+
+  <!-- =================================================
+  PART C: ADDITIONAL COURSES
+  Two cards per row on desktop.
+  ================================================== -->
+
+  <h3 class="course-section-title">
+    Additional Courses
+  </h3>
+
+  <div class="additional-course-grid">
+
+
+    <!-- =============================================
+    COURSE 4: MASTER'S ECONOMETRICS
+    ============================================== -->
+
+    <article class="training-card">
+
+      <span class="course-status">
+        Institutional training enquiries
+      </span>
+
+      <h4>Master’s Econometrics</h4>
+
+      <p class="course-description">
+        Develop a deeper understanding of econometric
+        theory, estimation, and inference, with attention
+        to assumptions and model interpretation.
+      </p>
+
+      <p class="course-audience">
+        <strong>Target audience</strong>
+        Master’s students in economics, agricultural
+        economics, finance, business, and related
+        disciplines.
+      </p>
+
+      <details class="course-syllabus">
+        <summary>View Syllabus</summary>
+
+        <ul>
+          <li>OLS theory and inference</li>
+          <li>Functional forms</li>
+          <li>Heteroskedasticity</li>
+          <li>Endogeneity and instrumental variables</li>
+          <li>Logit and probit models</li>
+        </ul>
+      </details>
+
+      <p class="course-format">
+        <strong>Proposed delivery format</strong>
+        Online or in person<br>
+        8 weeks · 16 sessions · 24 hours
+      </p>
+
+      <a class="button course-interest-button"
+         href="#institutional-training">
+        Request Training
+      </a>
+
+    </article>
+
+    <!-- END COURSE 4 -->
+
+
+    <!-- =============================================
+    COURSE 5: QUANTITATIVE METHODS AND STATISTICS
+    ============================================== -->
+
+    <article class="training-card">
+
+      <span class="course-status">
+        Institutional training enquiries
+      </span>
+
+      <h4>Quantitative Research Methods and Statistics</h4>
+
+      <p class="course-description">
+        Learn how to formulate quantitative questions,
+        collect suitable data, and select appropriate
+        statistical methods.
+      </p>
+
+      <p class="course-audience">
+        <strong>Target audience</strong>
+        Undergraduate and master’s students from
+        social science, business, agriculture,
+        and development-related disciplines.
+      </p>
+
+      <details class="course-syllabus">
+        <summary>View Syllabus</summary>
+
+        <ul>
+          <li>Research questions and hypotheses</li>
+          <li>Measurement and sampling</li>
+          <li>Descriptive statistics</li>
+          <li>Statistical inference</li>
+          <li>Hypothesis testing</li>
+          <li>Introduction to regression</li>
+        </ul>
+      </details>
+
+      <p class="course-format">
+        <strong>Proposed delivery format</strong>
+        Online or in person<br>
+        6 weeks · 12 sessions · 18 hours
+      </p>
+
+      <a class="button course-interest-button"
+         href="#institutional-training">
+        Request Training
+      </a>
+
+    </article>
+
+    <!-- END COURSE 5 -->
+
+
+    <!-- =============================================
+    COURSE 6: APPLIED STATISTICS
+    ============================================== -->
+
+    <article class="training-card">
+
+      <span class="course-status">
+        Institutional training enquiries
+      </span>
+
+      <h4>
+        Applied Statistics for Agriculture and
+        Life Sciences Using R
+      </h4>
+
+      <p class="course-description">
+        Apply statistical methods to field, laboratory,
+        and observational data using R, with examples
+        from agriculture and the life sciences.
+      </p>
+
+      <p class="course-audience">
+        <strong>Target audience</strong>
+        Students and researchers in agriculture,
+        veterinary science, fisheries, forestry,
+        biology, food science, and environmental science.
+      </p>
+
+      <details class="course-syllabus">
+        <summary>View Syllabus</summary>
+
+        <ul>
+          <li>Scientific-data management</li>
+          <li>t-tests and non-parametric tests</li>
+          <li>ANOVA</li>
+          <li>Experimental design</li>
+          <li>Regression and correlation</li>
+          <li>Scientific tables and figures</li>
+        </ul>
+      </details>
+
+      <p class="course-format">
+        <strong>Proposed delivery format</strong>
+        Online or in person<br>
+        6 weeks · 12 sessions · 18 hours
+      </p>
+
+      <a class="button course-interest-button"
+         href="#institutional-training">
+        Request Training
+      </a>
+
+    </article>
+
+    <!-- END COURSE 6 -->
+
+
+    <!-- =============================================
+    COURSE 7: EFFECTIVE SCIENTIFIC WRITING
+    ============================================== -->
+
+    <article class="training-card">
+
+      <span class="course-status">
+        Institutional training enquiries
+      </span>
+
+      <h4>Effective Scientific Writing</h4>
+
+      <p class="course-description">
+        Develop clear, focused, and logically structured
+        scientific writing. Participants learn to
+        communicate research findings and respond
+        constructively to peer review.
+      </p>
+
+      <p class="course-audience">
+        <strong>Target audience</strong>
+        Senior undergraduate and master’s students,
+        early-career researchers, and university teachers.
+      </p>
+
+      <details class="course-syllabus">
+        <summary>View Syllabus</summary>
+
+        <ul>
+          <li>Developing a research story</li>
+          <li>Introduction and methods</li>
+          <li>Results and discussion</li>
+          <li>Titles and abstracts</li>
+          <li>Referencing and research integrity</li>
+          <li>Journal submission and peer review</li>
+        </ul>
+      </details>
+
+      <p class="course-format">
+        <strong>Proposed delivery format</strong>
+        Online or in person<br>
+        5 weeks · 10 sessions · 15 hours
+      </p>
+
+      <a class="button course-interest-button"
+         href="#institutional-training">
+        Request Training
+      </a>
+
+    </article>
+
+    <!-- END COURSE 7 -->
+
+  </div>
+
+  <!-- END ADDITIONAL COURSES GRID -->
+
+
+  <!-- =================================================
+  PART D: INSTITUTIONAL TRAINING
+  Edit the introduction and customisation options here.
+  ================================================== -->
+
+  <div class="institutional-panel"
+       id="institutional-training">
+
+    <h3>Training for Universities and Organisations</h3>
+
+    <p>
+      Courses can be adapted to the academic level,
+      disciplinary background, and software requirements
+      of participating institutions. Enquiries are welcome
+      for short workshops, intensive courses, and
+      customised training programmes.
+    </p>
+
+    <ul class="institutional-options">
+      <li>Online, in-person, or hybrid delivery</li>
+      <li>Beginner, intermediate, or advanced level</li>
+      <li>R or Stata-based practical sessions</li>
+      <li>Discipline-specific datasets and examples</li>
+      <li>Short workshops or multi-week courses</li>
+      <li>Participant exercises and practical assignments</li>
+    </ul>
+
+    <p class="muted">
+      Delivery dates and arrangements are agreed
+      individually with the requesting institution.
+    </p>
+
+    <a class="button" href="#course-interest">
+      Request Institutional Training
+    </a>
+
+  </div>
+
+
+  <!-- =================================================
+  PART E: COURSE INTEREST FORM
+
+  This area is ready for a Google Form.
+  Until you insert the form, submissions are not collected.
+
+  Replace the temporary paragraph below with the iframe
+  code from your Google Form when it is ready.
+  ================================================== -->
+
+  <div class="interest-panel" id="course-interest">
+
+    <h3>Express Your Interest</h3>
+
+    <p>
+      Interested in joining a planned course or arranging
+      institutional training? The interest form will
+      allow you to select a course and your preferred
+      delivery format.
+    </p>
+
+    <!-- TEMPORARY MESSAGE: REMOVE AFTER ADDING YOUR FORM -->
+
+    <p class="muted">
+      The interest form will be available shortly.
+    </p>
+
+    <!-- INSERT YOUR GOOGLE FORM EMBED CODE HERE -->
+
+    <p class="interest-note">
+      Submitting the form is an expression of interest
+      and does not constitute registration or payment.
+      Please do not include sensitive personal information.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- END SECTION 8: COURSES AND PROFESSIONAL TRAINING -->
 
     <!-- =====================================================
     SECTION 9: CV
